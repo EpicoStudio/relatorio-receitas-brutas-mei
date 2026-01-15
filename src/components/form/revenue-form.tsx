@@ -1,5 +1,5 @@
 import { useImperativeHandle, forwardRef, useCallback } from "react"
-import { IconRefresh, IconCalendar, IconDownload, IconFileSpreadsheet, IconBrandGoogleDrive } from "@tabler/icons-react"
+import { IconRefresh, IconCalendar, IconDownload, IconFileSpreadsheet, IconBrandGoogleDrive, IconCalculator } from "@tabler/icons-react"
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from "@/components/ui/tooltip"
 import type { PerfilUsuario, DadosRelatorio } from "@/hooks/use-reports-storage"
