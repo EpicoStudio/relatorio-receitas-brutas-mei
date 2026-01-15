@@ -41,7 +41,27 @@ export function MonthNavigation({
   })
   
   const [startYearIndex, setStartYearIndex] = useState(0)
-  const maxVisibleYears = 10
+  // Menos anos visíveis em mobile para caber na tela
+  const [maxVisibleYears, setMaxVisibleYears] = useState(6)
+
+  // Ajustar quantidade de anos visíveis baseado no tamanho da tela
+  useEffect(() => {
+    const updateVisibleYears = () => {
+      const width = window.innerWidth
+      if (width < 360) {
+        setMaxVisibleYears(4)
+      } else if (width < 480) {
+        setMaxVisibleYears(5)
+      } else if (width < 640) {
+        setMaxVisibleYears(6)
+      } else {
+        setMaxVisibleYears(10)
+      }
+    }
+    updateVisibleYears()
+    window.addEventListener('resize', updateVisibleYears)
+    return () => window.removeEventListener('resize', updateVisibleYears)
+  }, [])
 
   // State for delete confirmations
   const [hoveredMonth, setHoveredMonth] = useState<number | null>(null)
@@ -131,20 +151,18 @@ export function MonthNavigation({
   }
 
   return (
-    <div className="mb-6 print:hidden">
+    <div className="mb-6 print:hidden overflow-hidden">
       {/* Year Navigation - Tab Style */}
-      <div className="flex items-center">
-        {anos.length > maxVisibleYears && (
-          <Button
-            variant="ghost"
-            size="icon"
-            className="h-8 w-8 shrink-0 border-b border-muted-foreground/40"
-            onClick={scrollYearsLeft}
-            disabled={!canScrollLeft}
-          >
-            <IconChevronLeft size={16} />
-          </Button>
-        )}
+      <div className="flex items-end w-full">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="h-[42px] w-8 shrink-0 border-b border-muted-foreground/40 rounded-none"
+          onClick={scrollYearsLeft}
+          disabled={!canScrollLeft}
+        >
+          <IconChevronLeft size={16} className="h-4 w-4" />
+        </Button>
         
         <div className="flex-1 flex">
           {visibleYears.map((ano) => {
@@ -161,7 +179,7 @@ export function MonthNavigation({
               >
                 <button
                   className={cn(
-                    "w-full px-3 py-2 text-sm font-medium transition-all duration-150",
+                    "w-full px-2 sm:px-3 py-2 text-xs sm:text-sm font-medium transition-all duration-150",
                     isSelected
                       ? "border border-muted-foreground/40 border-b-background bg-background text-foreground rounded-t-md -mb-px relative z-10"
                       : "border-b border-muted-foreground/40 hover:bg-muted/50 text-muted-foreground hover:text-foreground",
@@ -196,23 +214,21 @@ export function MonthNavigation({
           })}
         </div>
 
-        {anos.length > maxVisibleYears && (
-          <Button
-            variant="ghost"
-            size="icon"
-            className="h-8 w-8 shrink-0 border-b border-muted-foreground/40"
-            onClick={scrollYearsRight}
-            disabled={!canScrollRight}
-          >
-            <IconChevronRight size={16} />
-          </Button>
-        )}
+        <Button
+          variant="ghost"
+          size="icon"
+          className="h-[42px] w-8 shrink-0 border-b border-muted-foreground/40 rounded-none"
+          onClick={scrollYearsRight}
+          disabled={!canScrollRight}
+        >
+          <IconChevronRight size={16} className="h-4 w-4" />
+        </Button>
       </div>
 
       {/* Month Navigation with Fade Animation */}
       <div 
         className={cn(
-          "grid grid-cols-6 md:grid-cols-12 gap-1.5 mt-4 transition-opacity duration-150",
+          "grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-6 md:grid-cols-12 gap-1.5 sm:gap-2 mt-4 transition-opacity duration-150",
           isTransitioning && "opacity-0"
         )}
       >
@@ -234,7 +250,7 @@ export function MonthNavigation({
                 variant={isSelected ? "default" : "outline"}
                 size="sm"
                 className={cn(
-                  "w-full",
+                  "w-full h-9 sm:h-10 min-w-0 px-1 sm:px-2 text-xs sm:text-sm",
                   temDados && !isSelected && "border-primary/50 bg-primary/5"
                 )}
                 onClick={() => handleMesClick(mesNum)}

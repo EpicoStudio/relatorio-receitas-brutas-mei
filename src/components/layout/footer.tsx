@@ -27,11 +27,10 @@ export function Footer() {
   const body = encodeURIComponent("Olá,\n\nGostaria de entrar em contato sobre:\n\n")
 
   return (
-    <footer className="border-t bg-muted/30 print:hidden">
-      <div className="w-full px-4 py-6 md:px-6">
-        <div className="flex flex-col items-center gap-4 text-sm text-muted-foreground">
-          {/* Linha 1: Copyright e Contato */}
-          <div className="flex flex-col sm:flex-row items-center justify-between w-full gap-3">
+    <>
+      <footer className="border-t bg-muted/30 print:hidden">
+        <div className="w-full px-4 py-6 md:px-6">
+          <div className="flex flex-col sm:flex-row items-center justify-between w-full gap-3 text-sm text-muted-foreground">
             <p className="text-center sm:text-left">
               © {currentYear} Relatório MEI. Todos os direitos reservados.
             </p>
@@ -46,21 +45,23 @@ export function Footer() {
               </a>
             </div>
           </div>
-          {/* Linha 2: Créditos */}
-          <div className="flex items-center gap-2 text-xs text-muted-foreground/70 border-t border-border/50 pt-4 w-full justify-center">
-            <span>Design e desenvolvimento por</span>
-            <a
-              href="https://epico.studio"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-foreground hover:text-primary transition-colors"
-              title="Épico Studio"
-            >
-              <EpicoLogo className="h-4 w-auto" />
-            </a>
-          </div>
+        </div>
+      </footer>
+      {/* Créditos Épico Studio */}
+      <div className="bg-primary py-4 px-6 print:hidden">
+        <div className="flex items-center gap-2 text-xs text-white justify-center">
+          <span>Design e desenvolvimento por</span>
+          <a
+            href="https://epico.studio"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-white/80 transition-colors"
+            title="Épico Studio"
+          >
+            <EpicoLogo className="h-4 w-auto" />
+          </a>
         </div>
       </div>
-    </footer>
+    </>
   )
 }

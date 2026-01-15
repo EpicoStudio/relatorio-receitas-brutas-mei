@@ -176,7 +176,7 @@ export const RevenueForm = forwardRef<RevenueFormRef, RevenueFormProps>(
     const dataInicio = proximoMes.toISOString().replace(/-|:|\.\d{3}/g, "").slice(0, 15) + "00Z"
     const dataFim = proximoMes.toISOString().replace(/-|:|\.\d{3}/g, "").slice(0, 15) + "00Z"
 
-    const titulo = encodeURIComponent("📋 Preencher Relatório MEI - Receitas Brutas")
+    const titulo = encodeURIComponent("📋 Preencher Relatório MEI - Receitas Brutas - relatoriomei.app.br")
     const descricao = encodeURIComponent(
       `Lembrete mensal para preencher o Relatório de Receitas Brutas do MEI.\n\n` +
         `🔗 Acesse o formulário online:\nhttps://relatoriomei.app.br\n\n` +

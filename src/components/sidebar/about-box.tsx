@@ -18,6 +18,10 @@ export function AboutBox() {
         Preencha os valores de suas receitas mensais, imprima ou salve em PDF, 
         e mantenha seus registros organizados para a contabilidade.
       </CardDescription>
+      <CardDescription className="text-sm leading-relaxed mt-3 text-primary/80">
+        <strong>💾 Seus dados ficam salvos!</strong> Volte todo mês para preencher novos 
+        relatórios — as informações anteriores permanecem salvas no seu navegador.
+      </CardDescription>
     </CollapsibleCard>
   )
 }
