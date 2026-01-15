@@ -26,7 +26,7 @@ function AppContent() {
 
 export default function App() {
   return (
-    <ThemeProvider defaultTheme="system" storageKey="relatorio-mei-theme">
+    <ThemeProvider defaultTheme="light" storageKey="relatorio-mei-theme">
       <AppContent />
     </ThemeProvider>
   )
