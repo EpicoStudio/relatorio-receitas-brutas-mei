@@ -17,7 +17,7 @@ interface SidebarProps {
 
 export function Sidebar({ open, onOpenChange }: SidebarProps) {
   const sidebarContent = (
-    <div className="space-y-4 overflow-y-auto">
+    <div className="space-y-4 overflow-y-auto pb-8">
       <AboutBox />
       <FAQAccordion />
       <OfficialLinks />

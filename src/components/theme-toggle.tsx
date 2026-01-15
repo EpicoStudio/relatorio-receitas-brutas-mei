@@ -10,7 +10,12 @@ import {
 import { useTheme } from "@/components/theme-provider"
 
 export function ThemeToggle() {
-  const { setTheme } = useTheme()
+  const { setTheme, theme } = useTheme()
+
+  const handleThemeChange = (newTheme: "light" | "dark" | "system") => {
+    console.log("Mudando tema de", theme, "para", newTheme)
+    setTheme(newTheme)
+  }
 
   return (
     <DropdownMenu>
@@ -22,13 +27,13 @@ export function ThemeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onSelect={() => setTheme("light")}>
+        <DropdownMenuItem onClick={() => handleThemeChange("light")}>
           Claro
         </DropdownMenuItem>
-        <DropdownMenuItem onSelect={() => setTheme("dark")}>
+        <DropdownMenuItem onClick={() => handleThemeChange("dark")}>
           Escuro
         </DropdownMenuItem>
-        <DropdownMenuItem onSelect={() => setTheme("system")}>
+        <DropdownMenuItem onClick={() => handleThemeChange("system")}>
           Sistema
         </DropdownMenuItem>
       </DropdownMenuContent>

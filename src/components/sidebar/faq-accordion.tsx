@@ -5,12 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+import { CollapsibleCard } from "@/components/ui/collapsible-card"
 
 const faqItems = [
   {
@@ -48,31 +43,37 @@ const faqItems = [
     answer:
       "Sim! Os dados deste relatório são a base para preencher a Declaração Anual do Simples Nacional (DASN-SIMEI), onde você informa o faturamento total do ano.",
   },
+  {
+    question: "Como exportar para o Google Sheets?",
+    answer:
+      "Clique em 'Google Sheets' no cabeçalho. O sistema baixará um arquivo CSV e abrirá uma nova planilha. Na planilha, vá em Arquivo > Importar > Fazer upload, selecione o CSV baixado e clique em 'Importar dados'.",
+  },
+  {
+    question: "Meus dados estão seguros?",
+    answer:
+      "Sim! Todos os dados são processados localmente no seu navegador. Nenhuma informação é enviada para servidores externos. Os arquivos PDF e CSV são gerados diretamente no seu dispositivo.",
+  },
 ]
 
 export function FAQAccordion() {
   return (
-    <Card>
-      <CardHeader className="pb-3">
-        <div className="flex items-center gap-2">
-          <IconHelpCircle className="h-5 w-5 text-primary" />
-          <CardTitle className="text-base">Perguntas Frequentes</CardTitle>
-        </div>
-      </CardHeader>
-      <CardContent className="pt-0">
-        <Accordion type="single" collapsible className="w-full">
-          {faqItems.map((item, index) => (
-            <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-left text-sm hover:no-underline">
-                {item.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground">
-                {item.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </CardContent>
-    </Card>
+    <CollapsibleCard
+      title="Perguntas Frequentes"
+      icon={<IconHelpCircle className="h-5 w-5 text-primary" />}
+      defaultOpen={false}
+    >
+      <Accordion type="single" collapsible className="w-full">
+        {faqItems.map((item, index) => (
+          <AccordionItem key={index} value={`item-${index}`}>
+            <AccordionTrigger className="text-left text-sm hover:no-underline">
+              {item.question}
+            </AccordionTrigger>
+            <AccordionContent className="text-sm text-muted-foreground">
+              {item.answer}
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </CollapsibleCard>
   )
 }

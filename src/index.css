@@ -17,6 +17,8 @@
     font-size: 11.5px !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
+    background: white !important;
+    background-color: white !important;
   }
 
   .print-container {
@@ -24,12 +26,14 @@
     max-width: none !important;
     margin: 0 !important;
     padding: 0 !important;
+    background: transparent !important;
   }
 
   .print-card {
-    padding: 20px !important;
+    padding: 0 !important;
     box-shadow: none !important;
-    border: 1px solid #ccc !important;
+    border: none !important;
+    background: transparent !important;
   }
 
   .print-header {
@@ -61,6 +65,11 @@
     font-size: 11.5px !important;
     height: auto !important;
     min-height: 27px !important;
+  }
+
+  /* Hide number inputs in print, show formatted spans */
+  input[type="number"] {
+    display: none !important;
   }
 
   .print-input-value {
@@ -160,6 +169,7 @@
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
@@ -196,6 +206,7 @@
   --accent: oklch(0.882 0.093 84.429);
   --accent-foreground: oklch(0.268 0.007 34.298);
   --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(1 0 0);
   --border: oklch(0.923 0.003 48.717);
   --input: oklch(0.923 0.003 48.717);
   --ring: oklch(0.532 0.157 131.589);
@@ -230,6 +241,7 @@
   --accent: oklch(0.386 0.082 84.429);
   --accent-foreground: oklch(0.985 0.002 106.424);
   --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(1 0 0);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.841 0.184 128.25);

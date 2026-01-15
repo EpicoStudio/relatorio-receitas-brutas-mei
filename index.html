@@ -4,7 +4,147 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Relatório MEI - Receitas Brutas</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Relatório MEI - Gerador de Relatório Mensal de Receitas Brutas</title>
+    <meta name="description" content="Ferramenta gratuita para gerar o Relatório Mensal de Receitas Brutas do MEI (Microempreendedor Individual). Preencha, imprima ou exporte para PDF/CSV. Conforme exigido pela legislação brasileira." />
+    <meta name="keywords" content="relatório MEI, receitas brutas, microempreendedor individual, relatório mensal, DAS MEI, imposto MEI, faturamento MEI, controle financeiro MEI" />
+    <meta name="author" content="Épico Studio" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://relatoriomei.app.br" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://relatoriomei.app.br" />
+    <meta property="og:title" content="Relatório MEI - Gerador de Relatório Mensal de Receitas Brutas" />
+    <meta property="og:description" content="Gere gratuitamente o Relatório Mensal de Receitas Brutas do MEI. Imprima ou exporte para PDF/CSV. Ferramenta simples e prática para microempreendedores." />
+    <meta property="og:image" content="https://relatoriomei.app.br/og-image.png" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Relatório MEI" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://relatoriomei.app.br" />
+    <meta name="twitter:title" content="Relatório MEI - Gerador de Relatório Mensal de Receitas Brutas" />
+    <meta name="twitter:description" content="Gere gratuitamente o Relatório Mensal de Receitas Brutas do MEI. Imprima ou exporte para PDF/CSV." />
+    <meta name="twitter:image" content="https://relatoriomei.app.br/og-image.png" />
+    
+    <!-- GEO / AI Optimization Meta Tags -->
+    <meta name="ai:description" content="Esta é uma ferramenta web gratuita para microempreendedores individuais (MEI) no Brasil gerarem o Relatório Mensal de Receitas Brutas, documento obrigatório conforme a legislação. Permite preencher dados de receitas de comércio, indústria e serviços (com e sem documento fiscal), calcular totais automaticamente, salvar dados localmente, exportar para CSV, e imprimir ou salvar como PDF." />
+    <meta name="ai:capabilities" content="Geração de relatório MEI, cálculo automático de totais, exportação CSV, impressão PDF, armazenamento local, modo escuro, lembrete Google Agenda" />
+    <meta name="ai:audience" content="Microempreendedores Individuais (MEI) no Brasil que precisam gerar relatórios mensais de receitas brutas para cumprir obrigações fiscais" />
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Relatório MEI",
+      "alternateName": "Gerador de Relatório Mensal de Receitas Brutas MEI",
+      "url": "https://relatoriomei.app.br",
+      "description": "Ferramenta gratuita para gerar o Relatório Mensal de Receitas Brutas do MEI (Microempreendedor Individual). Preencha, imprima ou exporte para PDF/CSV.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "BRL"
+      },
+      "featureList": [
+        "Geração de Relatório Mensal de Receitas Brutas",
+        "Cálculo automático de totais",
+        "Exportação para CSV",
+        "Impressão e salvamento em PDF",
+        "Armazenamento local de dados",
+        "Suporte a múltiplos períodos (meses/anos)",
+        "Modo escuro",
+        "Lembrete mensal via Google Agenda"
+      ],
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Microempreendedores Individuais (MEI)"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "Épico Studio",
+        "url": "https://epico.studio"
+      },
+      "inLanguage": "pt-BR",
+      "isAccessibleForFree": true,
+      "browserRequirements": "Requires JavaScript. Requires HTML5."
+    }
+    </script>
+    
+    <!-- FAQ Schema for common questions -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O que é o Relatório Mensal de Receitas Brutas do MEI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "É um documento obrigatório que o Microempreendedor Individual (MEI) deve preencher mensalmente, registrando todas as receitas brutas obtidas no mês anterior, separadas por tipo de atividade (comércio, indústria ou serviços) e se houve ou não emissão de documento fiscal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O MEI é obrigado a fazer o relatório mensal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Todo MEI deve preencher o Relatório Mensal das Receitas Brutas até o dia 20 do mês subsequente ao da apuração. Este é um requisito legal para manter a regularidade do negócio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como usar esta ferramenta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Basta selecionar o mês/ano de apuração, preencher os dados do CNPJ, nome e as receitas do período. Os cálculos são feitos automaticamente. Você pode imprimir, salvar como PDF ou exportar os dados para CSV."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- HowTo Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Como preencher o Relatório Mensal de Receitas Brutas do MEI",
+      "description": "Passo a passo para preencher o relatório mensal obrigatório do MEI usando esta ferramenta online gratuita.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Selecionar o período",
+          "text": "Escolha o mês e ano de apuração usando a navegação no topo do formulário."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Preencher dados do empreendedor",
+          "text": "Informe o CNPJ e nome do Microempreendedor Individual."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Informar receitas",
+          "text": "Preencha os valores das receitas de comércio, indústria e serviços, separando entre com e sem documento fiscal."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Verificar totais",
+          "text": "Confira os totais calculados automaticamente pelo sistema."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Salvar ou imprimir",
+          "text": "Use os botões para imprimir o relatório, salvar como PDF ou exportar para CSV."
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
