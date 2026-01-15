@@ -54,7 +54,7 @@ function AppContent() {
         <main className="flex-1 p-3 pb-8 sm:p-4 md:p-6 md:pb-10 print:p-0 overflow-x-hidden">
           <div className="max-w-4xl mx-auto">
             {/* H1 Promocional - Mobile */}
-            <h1 className="lg:hidden text-primary font-bold text-xl leading-tight mb-4">
+            <h1 className="lg:hidden text-primary font-bold text-xl leading-tight mb-4 print:hidden">
               Organize seu MEI.
               <span className="block text-lg font-semibold">Gratuito e sem cadastro.</span>
             </h1>

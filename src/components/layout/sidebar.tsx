@@ -30,7 +30,7 @@ export function Sidebar({ open, onOpenChange }: SidebarProps) {
       <aside className="hidden lg:block w-80 shrink-0 print:hidden">
         <div className="p-4 pt-6">
           {/* H1 Promocional - Desktop */}
-          <h1 className="text-primary font-bold text-xl leading-tight mb-6">
+          <h1 className="text-primary font-bold text-xl leading-tight mb-6 print:hidden">
             Organize seu MEI.
             <span className="block text-lg font-semibold">Gratuito e sem cadastro.</span>
           </h1>
