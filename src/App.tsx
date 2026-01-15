@@ -55,7 +55,7 @@ function AppContent() {
           <div className="max-w-4xl mx-auto">
             {/* H1 Promocional - Mobile */}
             <h1 className="lg:hidden text-primary font-bold text-xl leading-tight mb-4">
-              Relatório MEI Online.
+              Organize seu MEI.
               <span className="block text-lg font-semibold">Gratuito e sem cadastro.</span>
             </h1>
             <MonthNavigation

@@ -17,7 +17,7 @@ interface SidebarProps {
 
 export function Sidebar({ open, onOpenChange }: SidebarProps) {
   const sidebarContent = (
-    <div className="space-y-4 overflow-y-auto pb-8">
+    <div className="space-y-4 pb-8 w-full">
       <AboutBox />
       <FAQAccordion />
       <OfficialLinks />
@@ -28,10 +28,10 @@ export function Sidebar({ open, onOpenChange }: SidebarProps) {
     <>
       {/* Desktop Sidebar - Fixed */}
       <aside className="hidden lg:block w-80 shrink-0 print:hidden">
-        <div className="sticky top-[calc(3.5rem+1px)] h-[calc(100vh-3.5rem-1px)] overflow-y-auto p-4 pt-6 flex flex-col items-start">
+        <div className="p-4 pt-6">
           {/* H1 Promocional - Desktop */}
           <h1 className="text-primary font-bold text-xl leading-tight mb-6">
-            Relatório MEI Online.
+            Organize seu MEI.
             <span className="block text-lg font-semibold">Gratuito e sem cadastro.</span>
           </h1>
           {sidebarContent}
