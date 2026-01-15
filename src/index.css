@@ -13,6 +13,10 @@
     margin: 16mm;
   }
 
+  body {
+    margin: 0.8cm !important;
+  }
+
   html, body {
     font-size: 11.5px !important;
     -webkit-print-color-adjust: exact !important;
