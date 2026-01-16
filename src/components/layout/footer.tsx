@@ -35,7 +35,7 @@ export function Footer() {
               © {currentYear} Relatório MEI. Todos os direitos reservados.
             </p>
             <div className="flex items-center gap-1">
-              <span>Dúvidas?</span>
+              <span>Dúvidas ou sugestões?</span>
               <a
                 href={`mailto:${email}?subject=${subject}&body=${body}`}
                 className="inline-flex items-center gap-1 text-primary hover:underline font-medium"
