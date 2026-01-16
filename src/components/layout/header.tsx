@@ -71,7 +71,7 @@ export function Header({ onMenuClick, onGerarExemplo, onLembreteMensal, onImprim
             </Tooltip>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Button onClick={onImprimir} size="sm" className="gap-1.5">
+                <Button id="imprimir-salvar-pdf" onClick={onImprimir} size="sm" className="gap-1.5">
                   <IconDownload size={16} />
                   <span className="hidden lg:inline">Imprimir / Salvar PDF</span>
                 </Button>
